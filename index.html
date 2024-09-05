@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- 定义文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- 设置HTML语言为中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 指定字符编码为UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 使IE浏览器以最高模式渲染 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 设置视口，以适应移动设备 -->
+    <title>phoenix1943's logs</title> <!-- 定义网页的标题 -->
+    <link rel="stylesheet" href="styles.css"> <!-- 链接到外部CSS文件 -->
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet"> <!-- 引入中国风字体 -->
+</head>
+<body>
+    <!-- 背景图 -->
+    <div class="background"></div> <!-- 背景图容器，用于设置固定背景图像 -->
+    
+    <!-- 页面头部 -->
+    <header class="header"> <!-- 定义页面头部部分 -->
+        <div class="container"> <!-- 容器用于限制页面内容的宽度 -->
+            <h1 class="title">权宇辰的网络日志</h1> <!-- 网站主标题 -->
+            <p class="subtitle">庸常之中，微芒不朽</p> <!-- 网站的副标题或标语 -->
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main class="main-content"> <!-- 主内容区域 -->
+        <div class="container"> <!-- 容器用于限制内容的宽度 -->
+            <!-- 输入表单 -->
+            <form id="log-form" class="log-form"> <!-- 日志输入表单 -->
+                <input type="text" id="log-title" placeholder="请输入日志标题" required> <!-- 日志标题输入框 -->
+                <textarea id="log-content" rows="4" placeholder="请输入日志内容" required></textarea> <!-- 日志内容输入框 -->
+                <button type="button" onclick="addLogEntry()" class="add-log-button">添加新日志</button> <!-- 提交日志的按钮 -->
+            </form>
+
+            <!-- 日志显示区 -->
+            <section id="log-section"> <!-- 日志内容区块 -->
+                <!-- 日志条目 -->
+                <article class="log-entry"> <!-- 单个日志条目 -->
+                    <h2>日志标题 1</h2> <!-- 日志的标题 -->
+                    <p class="date">2024年9月5日</p> <!-- 日志的日期 -->
+                    <p>这是第一篇日志的内容。在这里记录你的每日感受、心得或任何相关内容。</p> <!-- 日志的内容 -->
+                </article>
+                <!-- 可以添加更多日志条目 -->
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer"> <!-- 页面底部 -->
+        <div class="container"> <!-- 容器用于限制页脚内容的宽度 -->
+            <p>&copy; 2024 权宇辰的网络日志 - 个人日记</p> <!-- 页脚版权声明 -->
+        </div>
+    </footer>
+
+    <script>
+        // 添加新日志功能
+        function addLogEntry() { // 定义一个函数，用于添加新的日志条目
+            const title = document.getElementById('log-title').value; // 获取日志标题的输入值
+            const content = document.getElementById('log-content').value; // 获取日志内容的输入值
+
+            // 检查用户是否输入了标题和内容
+            if (title && content) { 
+                const logSection = document.getElementById('log-section'); // 获取日志显示区的引用
+                const newEntry = document.createElement('article'); // 创建一个新的日志条目元素
+                newEntry.className = 'log-entry'; // 为日志条目添加CSS类
+
+                // 设置日志条目的HTML内容
+                newEntry.innerHTML = `
+                    <h2>${title}</h2> <!-- 显示输入的日志标题 -->
+                    <p class="date">${new Date().toLocaleDateString('zh-CN')}</p> <!-- 显示当前日期 -->
+                    <p>${content}</p> <!-- 显示输入的日志内容 -->
+                `;
+
+                logSection.insertBefore(newEntry, logSection.firstChild); // 将新日志条目插入日志区的最前面
+
+                // 清空表单输入
+                document.getElementById('log-title').value = ''; // 清空标题输入框
+                document.getElementById('log-content').value = ''; // 清空内容输入框
+            } else {
+                alert('请输入日志标题和内容！'); // 提示用户输入
+            }
+        }
+    </script>
+</body>
+</html>

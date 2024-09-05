@@ -1,0 +1,143 @@
+/* 页面主体样式 */
+body {
+    background: rgba(0, 0, 0, 0.7); /* 设置页面背景为半透明黑色 */
+    color: #eaeaea; /* 设置默认字体颜色 */
+    margin: 0; /* 移除默认外边距 */
+    padding: 0; /* 移除默认内边距 */
+    font-family: 'SimSum', '宋体', serif; /* 设置默认字体为宋体 */ 
+}
+
+/* 背景样式 */
+.background {
+    position: fixed; /* 固定背景图像位置，使其不随滚动条移动 */
+    top: 0; /* 背景图从页面顶部开始 */
+    left: 0; /* 背景图从页面左侧开始 */
+    width: 100%; /* 背景图宽度为100% */
+    height: 100%; /* 背景图高度为100% */
+    background: url('观音禅院.jpg') no-repeat center center; /* 设置背景图片及其位置 */
+    background-size: cover; /* 背景图片自适应覆盖整个容器 */
+    opacity: 0.15; /* 设置透明度，以突出前景内容 */
+    z-index: -1; /* 设置z-index，使背景图位于所有内容的后面 */
+}
+
+/* 头部样式 */
+.header {
+    text-align: center; /* 文字居中对齐 */
+    padding: 40px 0; /* 设置上下内边距 */
+    border-bottom: 2px solid #444; /* 添加边框，以分隔头部区域 */
+    margin-bottom: 20px; /* 设置下方外边距 */
+    background: rgba(0, 0, 0, 0.7); /*头部背景为半透明黑色*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) /*添加阴影效果*/
+}
+
+.header .title {
+    font-size: 3.5em; /* 设置标题字体大小 */
+    /* font-family: 'ZCOOL KuaiLe', serif; */ /* 使用引入的自定义字体 */
+    font-family: 'SimSum', '宋体', serif; /* 使用宋体字体和备选字体 */
+    color: #f39c12; /* 设置主标题颜色 */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* 添加阴影效果 */
+    margin: 0; /* 移除默认外边距 */
+    letter-spacing: 3px; /* 调整字间距 */
+}
+
+.header .subtitle {
+    font-size: 1.2em; /* 设置副标题字体大小 */
+    color: #eaeaea; /* 设置副标题颜色 */
+    font-family: 'KaiTi', serif; /* 使用楷体字体 */
+    margin-top: 10px; /* 设置顶部外边距 */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+}
+
+/* 日志输入表单样式 */
+.log-form {
+    display: flex; /* 使用flex布局，使表单元素按列排列 */
+    flex-direction: column; /* 设置flex方向为列 */
+    gap: 10px; /* 设置表单元素之间的间距 */
+    margin-bottom: 20px; /* 设置表单下方的外边距 */
+    padding: 10px; /* 设置表单的内边距 */
+    background: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
+    border: 2px solid #f39c12; /* 金色边框 */
+    border-radius: 10px; /* 设置圆角边框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+}
+
+.log-form input[type="text"],
+.log-form textarea {
+    width: 100%; /* 设置输入框宽度为100% */
+    padding: 10px; /* 设置输入框的内边距 */
+    border: 1px solid #555; /* 设置输入框边框颜色 */
+    border-radius: 5px; /* 设置输入框的圆角 */
+    font-size: 1em; /* 设置字体大小 */
+    /* font-family: 'KaiTi', serif; */  /* 使用楷体字体 */
+    font-family: 'SimSum', '宋体', serif; /* 使用宋体字体和备选字体 */
+    background-color: #1f1f1f; /* 设置输入框背景颜色 */
+    color: #eaeaea; /* 设置输入文本颜色 */
+}
+
+.log-form input[type="text"]::placeholder,
+.log-form textarea::placeholder {
+    color: #888; /* 设置占位符文本颜色 */
+}
+
+.log-form input[type="text"]:focus,
+.log-form textarea:focus {
+    border-color: #f39c12; /* 设置输入框聚焦状态时的边框颜色 */
+    outline: none; /* 移除输入框的默认聚焦样式 */
+}
+
+/* 提交按钮样式 */
+.add-log-button {
+    display: block; /* 将按钮显示为块级元素 */
+    margin: 10px 0; /* 设置按钮上下外边距 */
+    padding: 10px 20px; /* 设置按钮的内边距 */
+    background-color: #f39c12; /* 设置按钮的背景颜色 */
+    color: #fff; /* 设置按钮的文本颜色 */
+    border: none; /* 移除按钮的默认边框 */
+    border-radius: 5px; /* 设置按钮的圆角 */
+    font-size: 1em; /* 设置按钮的字体大小 */
+    cursor: pointer; /* 将鼠标悬停在按钮上时显示为手型 */
+    transition: background-color 0.3s ease; /* 设置按钮背景颜色的过渡效果 */
+}
+
+.add-log-button:hover {
+    background-color: #d87c0c; /* 设置按钮悬停状态下的背景颜色 */
+}
+
+/* 日志条目样式 */
+.log-entry {
+    background-color: #2c2c2c; /* 设置日志条目的背景颜色 */
+    border: 1px solid #444; /* 设置日志条目的边框颜色 */
+    padding: 20px; /* 设置日志条目的内边距 */
+    margin-bottom: 20px; /* 设置日志条目的下方外边距 */
+    border-radius: 8px; /* 设置日志条目的圆角边框 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+}
+
+.log-entry h2 {
+    font-size: 1.8em; /* 设置日志标题的字体大小 */
+    color: #f39c12; /* 设置日志标题的颜色 */
+    margin-bottom: 10px; /* 设置日志标题的下方外边距 */
+}
+
+.log-entry .date {
+    font-size: 0.9em; /* 设置日期文本的字体大小 */
+    color: #888; /* 设置日期文本的颜色 */
+    margin-bottom: 15px; /* 设置日期文本的下方外边距 */
+}
+
+/* 页脚样式 */
+.footer {
+    /* background-color: #222; /* 设置页脚背景颜色 */
+    background: rgba(0, 0, 0, 0.7); /* 设置页脚为半透明黑色背景 */
+    text-align: center; /* 设置页脚文本居中对齐 */
+    padding: 10px 0; /* 设置页脚上下内边距 */
+    position: fixed; /* 固定页脚位置 */
+    width: 100%; /* 设置页脚宽度为100% */
+    bottom: 0; /* 设置页脚位于页面底部 */
+}
+
+.footer p {
+    margin: 0; /* 移除页脚文本的外边距 */
+    color: #eaeaea; /* 设置页脚文本的颜色 */
+    font-size: 0.8em; /* 设置页脚文本的字体大小 */
+}
