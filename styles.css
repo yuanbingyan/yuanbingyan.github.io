@@ -63,7 +63,7 @@ body {
 
 .log-form input[type="text"],
 .log-form textarea {
-    width: 100%; /* 设置输入框宽度为100% */
+    width: calc(100% - 22px); /* 修改：设置输入框宽度，减去内边距和边框的总宽度 */
     padding: 15px; /* 设置输入框的内边距 - 修改：增大内边距*/
     border: 1px solid #555; /* 设置输入框边框颜色 */
     border-radius: 5px; /* 设置输入框的圆角 */
@@ -72,6 +72,7 @@ body {
     font-family: 'SimSum', '宋体', serif; /* 使用宋体字体和备选字体 */
     background-color: #1f1f1f; /* 设置输入框背景颜色 */
     color: #eaeaea; /* 设置输入文本颜色 */
+    box-sizing: border-box; /* 修改：确保边框和内边距不会导致宽度超出 */
     margin-bottom: 10px; /* 设置输入框底部外边距，增加输入框之间的间距 - 修改： 增大间距 */
 }
 
@@ -95,6 +96,7 @@ body {
 /* 提交按钮样式 */
 .add-log-button {
     display: block; /* 将按钮显示为块级元素 */
+    width: 100%; /* 修改：设置按钮宽度为100% */
     margin: 10px 0; /* 设置按钮上下外边距 */
     padding: 15px 20px; /* 设置按钮的内边距 - 修改：增大内边距 */
     background-color: #f39c12; /* 设置按钮的背景颜色 */
