@@ -26,8 +26,8 @@ body {
     padding: 40px 0; /* 设置上下内边距 */
     border-bottom: 2px solid #444; /* 添加边框，以分隔头部区域 */
     margin-bottom: 20px; /* 设置下方外边距 */
-    background: rgba(0, 0, 0, 0.7); /*头部背景为半透明黑色*/
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) /*添加阴影效果*/
+    background: rgba(0, 0, 0, 0.7); /* 头部背景为半透明黑色 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) /* 添加阴影效果 */
 }
 
 .header .title {
@@ -52,9 +52,9 @@ body {
 .log-form {
     display: flex; /* 使用flex布局，使表单元素按列排列 */
     flex-direction: column; /* 设置flex方向为列 */
-    gap: 10px; /* 设置表单元素之间的间距 */
+    gap: 15px; /* 设置表单元素之间的间距 - 修改：增大间距 */
     margin-bottom: 20px; /* 设置表单下方的外边距 */
-    padding: 10px; /* 设置表单的内边距 */
+    padding: 20px; /* 增加表单的内边距 - 修改：增大内边距 */
     background: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
     border: 2px solid #f39c12; /* 金色边框 */
     border-radius: 10px; /* 设置圆角边框 */
@@ -64,7 +64,7 @@ body {
 .log-form input[type="text"],
 .log-form textarea {
     width: 100%; /* 设置输入框宽度为100% */
-    padding: 10px; /* 设置输入框的内边距 */
+    padding: 15px; /* 设置输入框的内边距 - 修改：增大内边距*/
     border: 1px solid #555; /* 设置输入框边框颜色 */
     border-radius: 5px; /* 设置输入框的圆角 */
     font-size: 1em; /* 设置字体大小 */
@@ -72,6 +72,13 @@ body {
     font-family: 'SimSum', '宋体', serif; /* 使用宋体字体和备选字体 */
     background-color: #1f1f1f; /* 设置输入框背景颜色 */
     color: #eaeaea; /* 设置输入文本颜色 */
+    margin-bottom: 10px; /* 设置输入框底部外边距，增加输入框之间的间距 - 修改： 增大间距 */
+}
+
+/* 设置文本区域(textarea)的样式 */
+.log-form textarea {
+    height: 200px; /* 增加文本区域的高度 - 修改： 设置为200px */
+    resize: vertical; /* 允许用户垂直调整文本区域大小 */
 }
 
 .log-form input[type="text"]::placeholder,
@@ -89,7 +96,7 @@ body {
 .add-log-button {
     display: block; /* 将按钮显示为块级元素 */
     margin: 10px 0; /* 设置按钮上下外边距 */
-    padding: 10px 20px; /* 设置按钮的内边距 */
+    padding: 15px 20px; /* 设置按钮的内边距 - 修改：增大内边距 */
     background-color: #f39c12; /* 设置按钮的背景颜色 */
     color: #fff; /* 设置按钮的文本颜色 */
     border: none; /* 移除按钮的默认边框 */
