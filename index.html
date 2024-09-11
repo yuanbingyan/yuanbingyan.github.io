@@ -45,32 +45,104 @@
     </footer>
 
     <script>
-        // 添加新日志功能
-        function addLogEntry() { // 定义一个函数，用于添加新的日志条目
+        // 修改 1：页面加载时从服务器加载日志数据
+        window.onload = function() {
+            fetch('http://localhost:3000') // 替换为您的服务器地址
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(log => displayLogEntry(log.title, log.content, log.date)); // 显示每个日志条目
+            })
+            .catch(error => {
+                console.error('从服务器加载日志时出错:', error);
+            });
+        };
+
+        // 修改 2: 显示日志条目
+        function displayLogEntry(title, content, date) {
+            const logSection = document.getElementById('log-section');
+            const newEntry = document.createElement('article');
+            newEntry.className = 'log-entry';
+
+            // 设置日志条目的HTML内容
+            newEntry.innerHTML = `
+                <h2>${title}</h2>
+                <p class="date">${date}</p>
+                <p>${content}</p>
+                <button onclick="deleteLogEntry(this)" class="delete-button">删除</button>
+            `; // 使用反引号以结束模板字符串
+
+            logSection.insertBefore(newEntry, logSection.firstChild);
+        }
+
+        // 修改 3：添加新日志功能
+        function addLogEntry() {
             const title = document.getElementById('log-title').value; // 获取日志标题的输入值
             const content = document.getElementById('log-content').value; // 获取日志内容的输入值
+            const date = new Date().toLocaleDateString('zh-CN'); // 获取当前日期
 
-            // 检查用户是否输入了标题和内容
-            if (title && content) { 
-                const logSection = document.getElementById('log-section'); // 获取日志显示区的引用
-                const newEntry = document.createElement('article'); // 创建一个新的日志条目元素
-                newEntry.className = 'log-entry'; // 为日志条目添加CSS类
+            if (title && content) {
+                // 显示新日志条目
+                displayLogEntry(title, content, date);
 
-                // 设置日志条目的HTML内容
-                newEntry.innerHTML = `
-                    <h2>${title}</h2> <!-- 显示输入的日志标题 -->
-                    <p class="date">${new Date().toLocaleDateString('zh-CN')}</p> <!-- 显示当前日期 -->
-                    <p>${content}</p> <!-- 显示输入的日志内容 -->
-                `;
-
-                logSection.insertBefore(newEntry, logSection.firstChild); // 将新日志条目插入日志区的最前面
+                // 传输日志到后端服务器
+                sendLogToServer({ title, content, date }); // 调用函数将日志传输到服务器
 
                 // 清空表单输入
-                document.getElementById('log-title').value = ''; // 清空标题输入框
-                document.getElementById('log-content').value = ''; // 清空内容输入框
+                document.getElementById('log-title').value = '';
+                document.getElementById('log-content').value = '';
             } else {
-                alert('请输入日志标题和内容！'); // 提示用户输入
+                alert('请输入日志标题和内容。');
             }
+        }
+
+        // 修改 4：删除日志功能
+        function deleteLogEntry(button) {
+            const entry = button.parentNode;
+            const title = entry.querySelector('h2').innerText;
+            const content = entry.querySelector('p:nth-child(3)').innerText;
+            const date = entry.querySelector('.date').innerText;
+
+            // 传输删除请求到后端服务器
+            sendDeleteRequestToServer({ title, content, date });
+
+            // 从页面中移除日志条目
+            entry.remove();
+        }
+
+        // 修改 5：传输日志到后端服务器
+        function sendLogToServer(log) {
+            fetch('http://localhost:3000', { // 替换为您的服务器地址
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(log)
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log('服务器响应:', data);
+            })
+            .catch(error => {
+                console.error('传输日志到服务器时出错:', error);
+            });
+        }
+
+        // 修改 6：删除日志请求传输到服务器
+        function sendDeleteRequestToServer(log) {
+            fetch('http://localhost:3000', { // 替换为您的服务器地址
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(log)
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log('服务器响应:', data);
+            })
+            .catch(error => {
+                console.error('删除日志时出错:', error);
+            });
         }
     </script>
 </body>
