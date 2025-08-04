@@ -3,9 +3,8 @@ secondary_name: "Quan"
 navbar_name: "Yuchen Quan"
 
 positions:
-  - logo: /assets/images/badges/MIT_Social_circle.png # Logo is optional
-    name: Position 1 with logo
-  - name: Position 2 without logo
+  - logo: /assets/images/badges/ChinaUnversityOfPetroleum.png # Logo is optional
+    name: M.S. in the College of Artificial Intelligence
 
 email: "2023211209@student.cup.edu.cn"
 # cv_link: link-to-your-cv-file
