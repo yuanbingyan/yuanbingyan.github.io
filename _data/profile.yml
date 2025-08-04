@@ -1,9 +1,9 @@
-primary_name: "Yuchen"
-secondary_name: "Quan"
+primary_name: "Yuchen Quan"
+secondary_name: ""
 navbar_name: "Yuchen Quan"
 
 positions:
-  - logo: /assets/images/badges/ChinaUnversityOfPetroleum.jpg # Logo is optional
+  - logo: /assets/images/badges/BlueChinaUnversityOfPetroleum.gif # Logo is optional
     name: M.S. in the College of Artificial Intelligence
 
 email: "2023211209@student.cup.edu.cn"
@@ -34,7 +34,7 @@ portrait_caption: >-
 
 education:
   - name: China University of Petroleum, Beijng
-    logo: /assets/images/badges/ChinaUnversityOfPetroleum.jpg
+    logo: /assets/images/badges/BlueChinaUnversityOfPetroleum.gif
     position: >-
       The College of Artificial Intelligence <br/>
       M.S. in Information and Communication Engineering
