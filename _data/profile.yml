@@ -48,17 +48,6 @@ education:
     position: B.S. in Telecommunication Engineering
     date: Sep. 2019 - June. 2023
 
-experience:
-  - name: Software Engineering Center Chinese Academy of Sciences
-    logo: /assets/images/badges/SoftwareEngineeringCenterChineseAcademyOfSciences.png
-    position: Research Intern
-    date: July 2024 - Aug 2024
-
-  - name: Sinopec Engineering Co., Ltd., Guangzhou
-    logo: /assets/images/badges/Sinopec.jpg
-    position: Intern
-    date: July 2023 - Aug 2023
-
 awards:
   - name: Third Prize Scholarship of China University of Petroleum, Beijing
     date: 2025
@@ -70,3 +59,14 @@ awards:
     date: 2022
   - name: Second Prize Scholarship of Zhengzhou University
     date: 2021
+
+experience:
+  - name: Software Engineering Center Chinese Academy of Sciences
+    logo: /assets/images/badges/SoftwareEngineeringCenterChineseAcademyOfSciences.png
+    position: Research Intern
+    date: July 2024 - Aug 2024
+
+  - name: Sinopec Engineering Co., Ltd., Guangzhou
+    logo: /assets/images/badges/Sinopec.jpg
+    position: Intern
+    date: July 2023 - Aug 2023
