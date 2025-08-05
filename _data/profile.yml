@@ -3,7 +3,7 @@ secondary_name: ""
 navbar_name: "Yuchen Quan"
 
 positions:
-  - logo: /assets/images/badges/ChinaUnversityOfPetroleumBeijing.png # Logo is optional
+  - logo: /assets/images/badges/ChinaUniversityOfPetroleumBeijing.png # Logo is optional
     name: M.S. in the College of Artificial Intelligence
 
 email: "2023211209@student.cup.edu.cn"
