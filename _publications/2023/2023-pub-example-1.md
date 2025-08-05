@@ -9,7 +9,8 @@ abstract: >-
 # cover:          /assets/images/covers/cover1.jpg
 authors:
 - Yuchen Quan*
-- Yaru Xue
+- Zhuoer Liu*
+- Rui Guo*
 links:
-  Paper: https://www.cell.com
+  Paper: https://www.researchgate.net/publication/382370767_Modeling_and_numerical_simulation_optimization_of_gain_spectrum_of_thulium-doped_broadband_fiber_amplifier_based_on_cat_swarm_algorithm
 ---
