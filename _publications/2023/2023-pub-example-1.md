@@ -1,17 +1,15 @@
 ---
-title:          "Lorem ipsum: Dolor sit amet, consectetur adipiscing elit"
-date:           2023-01-05 00:01:00 +0800
+title:          "Modeling and numerical simulation optimization of gain spectrum of thulium-doped broadband amplifier based on cat swarm algorithm"
+date:           2023-07-14 00:00:00 +0800
 selected:       true
-pub:            "Nature Communications"
+pub:            "The 5th International Conference on Computing and Data Science"
 pub_date:       "2023"
 abstract: >-
-  Cover image is a photo by Thomas Renaud on Unsplash. The abstract of the publication is meant to be a TLDR (very brief summary with 1~2 sentences) of your paper.
-cover:          /assets/images/covers/cover1.jpg
+  With the development of light technology, especially the maturation of WDM/DWDM technology, the demand for optical amlification of the S-band and S+ band(1450nm~1520nm) is increasing day by day, and the energy level structure of $Tm^{3+}$ has energy level transitions to meet the requirements of S-band and S+ band amplification. Although thulium ion has a very complex energy level structure, TDFA is one of the most promising optical fiber amplifiers for S and S+ bands. At the same time, with the continuous development of computer technology and mathematical theory, the optimization algorithm has been rapidly developed and widely used in recent decades, based on genetic algorithm, simulated annealing algorithm, and other traditional optimization algorithms that have been proved to get good convergence speed and optimization results. In this paper, the thulium-doped fiber amplifier's gain is optimized by using a cat swarm intelligent optimization algorithm to obtain the maximum fiber length and doping concentration.
+# cover:          /assets/images/covers/cover1.jpg
 authors:
-- Your Name*
-- Robert White*
-- John Doe
-- Charles Green (Stanford)
+- Yuchen Quan*
+- Yaru Xue
 links:
   Paper: https://www.cell.com
 ---
