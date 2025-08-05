@@ -17,7 +17,7 @@ github: yuanbingyan
 linkedin: yuchen-quan-8a891936b
 orcid: 0009-0008-3323-7123
 
-short_bio_text_justify: false
+short_bio_text_justify: True
 short_bio: >-
   <p>
     I am a second-year Master student in the College of Artificial Intelligence at China University of Petroleum, Beijing,
