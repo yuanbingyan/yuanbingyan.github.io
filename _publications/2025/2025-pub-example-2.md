@@ -1,13 +1,13 @@
 ---
-title:          "Solving Low-dose Computer Tomography inverse problem by learning the first-order score of the sparse sinogram samples' distribution"
-date:           2025-06-01 00:00:00 +0800
+title:          "PC-POCS sampler to reconstruct a low-dose computer tomography image consistent with both the prior and the measurements"
+date:           2025-07-15 00:00:00 +0800
 selected:       True
 # pub:            "The Pacific Rim International Conference on Artificial Intelligence(PRICAI)"
-pub_pre:        "Submitted to The Pacific Rim International Conference on Artificial Intelligence(PRICAI)"
-pub_post:       'Under review.'
+pub_pre:        "Submitted to The IEEE International Conference on Bioinformatics and Biomedicine(BIBM)"
+#pub_post:       'Under review.'
 pub_date:       "2025"
 abstract: >-
-  Computer Tomography is widely used to acquire the internal structures of the target object in a non-invasive way. In order to obtain a high-quality reconstruction, densely distributed detectors are always used to improve the sampling rate, which is used to avoid the artifacts caused by angular undersampling. However, the high density of X-Rays is harmful to the human body, which implies to us that sparse-view measurement is urgently needed. Lots of current methods couldn't make full use of the information from different domains, which leads to the failure of getting a reliable reconstruction result. This paper shows that the Low-dose Computer Tomography inverse problem could be solved from the perspective of an inpainting task in the measurement domain(Radon domain). Besides this, a method based on a score-based diffusion model is proposed, and some properties of the sinogram are used to achieve a more reliable result: $14%$ improvement in the metric PSNR and some improvement in the metric SSIM.
+  Reconstructing medical images from partial measuremets is a critical inverse problem in Computer Tomography, essential for reducing radiation exposure while maintaining diagnostic accuracy, addressing challenges of small size and poor resolution in CT data. Existing solutions based on machine learning typically train a model to directly map measurements to medical images, relying on a training dataset of paired images and measurements synthesized using a fixed physical model of the measurement process; however, this approach greatly hinders generalization to unknown measurement processes. To address this issue, we propose a fully unsupervised technique for solving the inverse problem, leveraging score-based generative models to eliminate the need for paired data. Specifically, we first train a score-based generative model on clean conventional-dose medical images to capture their prior distribution. Then, given measurements and a physical model of the measurement process, we introduce a sampling method to reconstruct an image consistent with both the prior and the measurements. Empirically, we observe comparable or better performance to other sampling techniques in several medical imaging tasks in Computer Tomography, while demonstrating considerably better generalization to unknown measurement processes.
 
 # cover:          /assets/images/covers/cover2.jpg
 authors:
